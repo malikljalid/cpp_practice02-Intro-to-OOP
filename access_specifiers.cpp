@@ -2,7 +2,9 @@
 
 class cssPerson
 {
-    private:
+    // access specifiers are also called acccess modifiers
+
+    private:                          // accessible only within this class (within the blueprint)
     char        Sex;
 
     bool        isMale(void)
@@ -16,7 +18,7 @@ class cssPerson
     }
 
 
-    protected:
+    protected:                         // accessible within this class and childs of this class (this blueprint & blueprint of childs of this class)
     int         Age;
 
     int         AgeAfterGraduat(void)
@@ -25,7 +27,7 @@ class cssPerson
     }
 
 
-    public:
+    public:                           // accessible everywhere.. inside the class (objects) and inside (blueprint)
     std::string FirstName;
     std::string LastName;
 
@@ -46,12 +48,14 @@ int main(void)
 
     // Person.Age = 19;      
     // int AgeAfterGardation = Person.AgeAfterGraduat();
-    // Age and AgeAfterGraduat() protected memebers are not accessible outstide the class.. but we can access them through a child class of cssPerson
+
+    // ---> Age and AgeAfterGraduat() protected memebers are not accessible outstide the class.. but we can access them through a child class of cssPerson
 
     // Person.Sex = 'M';
     // if (Person.isMale())
     //     std::cout << "Person is male\n";
-    //Sex and isMale() private members are not accessible anywhere nether the class cssPerson itself 
+
+    //---> Sex and isMale() private members are not accessible anywhere nether the class cssPerson itself 
     
 
     return (0);
