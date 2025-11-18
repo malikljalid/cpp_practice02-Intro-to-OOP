@@ -36,7 +36,7 @@ int main(void)
     Person.setLastName("Dazzler");
 
     std::cout << Person.getFirstName() << std::endl;
-    std::cout << Person.getLastName()  << std::endl;
+    std::cout << Person.getLastName() << std::endl;
 
     return (0);
 }
