@@ -1,6 +1,6 @@
 #include <iostream>
 
-class clsEmployee
+class clsDeveloper
 {
     private:
     short int   _ID;
@@ -11,9 +11,10 @@ class clsEmployee
     std::string _Title;
     std::string _Departement;
     int         _Salary;
+    std::string _MainProgrammingLanguage;
 
     public:
-    clsEmployee(void)
+    clsDeveloper(void)
     {
         _ID = -1;
         _FirstName = "No First Name";
@@ -22,10 +23,11 @@ class clsEmployee
         _Phone = "No Phone";
         _Title = "No Title";
         _Departement = "No Departement";
+        _MainProgrammingLanguage = "Nothing";
         _Salary = 0;
     }
 
-    clsEmployee(short int ID, std::string FirstName, std::string LastName, std::string Email, std::string Phone, std::string Title, std::string Departement, int Salary)
+    clsDeveloper(short int ID, std::string FirstName, std::string LastName, std::string Email, std::string Phone, std::string Title, std::string Departement, int Salary)
     {
         _ID = ID;
         setFirstName(FirstName);
@@ -37,7 +39,7 @@ class clsEmployee
         _Salary = Salary;
     }
 
-    ~clsEmployee(void) {};
+    ~clsDeveloper(void) {};
 
     short int getID(void)
     {
@@ -129,6 +131,7 @@ class clsEmployee
         std::cout << "Title       : " << _Title << std::endl;
         std::cout << "Depratement : " << _Departement << std::endl;
         std::cout << "Salary      : " << _Salary << std::endl;
+        std::cout << "PLanguage   : " << _MainProgrammingLanguage << std::endl;
         std::cout << "--------------------------\n";
     }
 
@@ -148,7 +151,7 @@ class clsEmployee
 
 int main(void)
 {
-    clsEmployee Zakaria(42, "Zakaria", "The Magician", "zakaria@magician.com", "+21261113909", "Software Engineer", "IT", 7000);
+    clsDeveloper Zakaria(42, "Zakaria", "The Magician", "zakaria@magician.com", "+21261113909", "Software Engineer", "IT", 7000);
 
     Zakaria.print(); 
     Zakaria.sendEmail("Birthday Request", "Happy Birthday Zakaria");
