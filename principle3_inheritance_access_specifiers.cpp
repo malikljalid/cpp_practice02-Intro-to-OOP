@@ -6,7 +6,7 @@ class clsA
     int _Var1 = 1;
     void _Func(void)
     {
-        std::cout << "Function 1\n";
+        std::cout << "Function 1 : value of Var 1 --> " << _Var1 << std::endl;
     }
 
     protected:
